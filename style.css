@@ -122,7 +122,7 @@ body{
 }
 
 .aside .nav-more li a i {
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .aside i{
@@ -138,10 +138,13 @@ body{
     display: flex;
     flex-direction: row;
     margin-top: 15px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .row{
-    gap: 7rem;
+    margin-bottom: 20px;
 }
 
 .box {
