@@ -1,0 +1,148 @@
+:root{
+    --bg-black-900:#111111;
+    --bg-black-100:#252525;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#ffffff;
+    --text-black-700:#dfdfdf;
+}
+
+body{
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+::before,::after{
+    box-sizing: border-box;
+}
+
+.section{
+    background: var(--bg-black-900);
+    min-height: 100vh;
+    display: block;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    opacity: 1;
+    padding: 3rem;
+}
+
+.aside {
+    width: 270px;
+    background: var(--bg-black-100);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aside .nav {
+    padding-top: 5rem;
+    margin: 2rem;
+}
+
+.aside .nav li {
+    margin-bottom: 25px;
+    display: block;
+}
+
+.aside .nav li a {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    color: var(--text-black-900);
+    padding: 5px 15px;
+}
+
+.aside .nav li a.active {
+    background-color: #FF5757;
+    border-radius: 10px;
+}
+
+.aside .nav li a i {
+    margin-right: 15px;
+}
+
+.aside .navbar-toggle {
+    height: 40px;
+    width: 45px;
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border: 5px;
+    color: var(--text-black-900);
+    font-size: 45px;
+    display: none;
+}
+
+.nav-more {
+    align-self: flex-end;
+}
+
+.aside .nav-more {
+    padding-top: 5rem;
+    margin: 2rem 5rem 0 2rem;
+}
+
+.aside .nav-more li {
+    margin-bottom: 25px;
+    display: block;
+}
+
+.aside .nav-more li a {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    color: var(--text-black-900);
+    padding: 5px 15px;
+}
+
+.aside .nav-more li a.active {
+    background-color: #FF5757;
+    border-radius: 10px;
+}
+
+.aside .nav-more li a i {
+    margin-right: 15px;
+}
+
+.aside i{
+    font-size: 25px;
+}
+
+.welcome-user h2{
+    color: var(--text-black-900);
+    font-size: 35px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 150rem;
+    gap: 10px;
+}
+
+.box {
+    width: 20rem;
+    height: 15rem;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
