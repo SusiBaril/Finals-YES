@@ -33,7 +33,7 @@
         <ul class="nav">
             <li><a href="#home" style="text-decoration:none;" class="active"><i class="bx bx-home"></i>Home</a></li>
             <li><a href="#product" style="text-decoration:none;"><i class="bx bx-package"></i>Product</a></li>
-            <li><a href="#transaction" style="text-decoration:none;"><i class="bx bx-cart"></i>Transation</a></li>
+            <li><a href="#transaction" style="text-decoration:none;"><i class="bx bx-cart"></i>Transaction</a></li>
             <li><a href="#stock" style="text-decoration:none;"><i class="bx bx-store"></i>Stock</a></li>
             <li><a href="#customer" style="text-decoration:none;"><i class="bx bx-user"></i>Customer</a></li>
             <li><a href="#sales" style="text-decoration:none;"><i class="bx bx-dollar"></i>Total Sale</a></li>
@@ -95,6 +95,8 @@
               <h3>Sales Category</h3>
             </div>
 
+            <!-- Charts -->
+
             <div class="container-fluid">
               <div class="row mr-1">
                 <div class="col-md-7">
@@ -113,6 +115,43 @@
                 </div>
               </div>
             </div>
+
+        </section>
+
+        <!-- Product Section -->
+
+        <section class="product section" id="product">
+
+          <div class="title-product">
+            <h1>Products</h1>
+          </div>
+
+          <div class="addproduct">
+            <div class="button"><i></i>Add Product</div>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row mb-0">
+              <div class="col-md-6">
+                <div class="box-product">
+                  <div class="linechart-product">
+                    <h1>Total Sales</h1>
+                    <canvas id="myChart"></canvas>
+                  </div>
+                </div>  
+              </div>
+              <div class="col-md-6">
+                <div class="box-product">
+                  <div class="latest-order">
+                    <h2>Products</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-0">
+
+            </div>
+          </div>
 
         </section>
 

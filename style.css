@@ -6,9 +6,12 @@
     --bg-black-50:#e8dfec;
     --text-black-900:#ffffff;
     --text-black-700:#dfdfdf;
+    --text-black-100:#ffffff;
 }
 
 body{
+    margin: 0;
+    padding: 0;
     line-height: 1.5;
     font-size: 16px;
     font-family: "Inter", sans-serif;
@@ -31,13 +34,14 @@ body{
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
-    position: fixed;
-    left: 270px;
-    top: 0;
-    right: 0;
     opacity: 1;
-    padding: 3rem;
+    padding: 0 30px;
+    padding-top: 35px;
     font-family: "Inter", sans-serif;
+}
+
+.main-content{
+    padding-left: 270px;
 }
 
 .aside {
@@ -135,6 +139,8 @@ body{
     margin-bottom: 30px;
 }
 
+/* Home Section */
+
 .container {
     display: flex;
     flex-direction: row;
@@ -181,7 +187,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 58rem;
+    gap: 45rem;
     margin-top: 3rem;
     color: var(--text-black-900);
 }
@@ -194,7 +200,7 @@ body{
 }
 
 .linechart {
-    width: 60rem;
+    max-width: 50rem;
     padding: 25px;
     border-radius: 20px;
     background-color: var(--bg-black-100);
@@ -207,8 +213,65 @@ body{
 }
 
 .piechart{
-    width: 31.5rem;
+    max-width: 26rem;
     padding: 2rem;
     border-radius: 20px;
     background-color: var(--bg-black-100);
 }
+
+/* Product Section */
+
+.title-product{
+    color: var(--text-black-900);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addproduct{
+    color: var(--text-black-900);
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+}
+
+.button{
+    cursor: pointer;
+    background-color: #00774D;
+    padding: 10px;
+    border: 1px solid #00774D;
+    border-radius: 50px;
+}
+
+.box-product {
+    height: 37rem;
+    border-radius: 10px;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.linechart-product{
+    max-width: 45rem;
+    height: 23.5rem;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: var(--bg-black-100);
+}
+
+.linechart-product h1{
+    color: var(--text-black-100);
+    font-size: 25px;
+}
+
+.latest-order{
+    max-width: 45rem;
+    height: 23.5rem;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: var(--bg-black-100);
+}
+
+.latest-order h2{
+    color: var(--text-black-100);
+}
+

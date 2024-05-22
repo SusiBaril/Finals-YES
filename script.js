@@ -1,5 +1,4 @@
 // Chart 1
-// Chart 1
 const ctxLine = document.getElementById('myChart');
 
 new Chart(ctxLine, {
