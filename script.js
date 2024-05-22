@@ -70,3 +70,4 @@ new Chart(ctxPie, {
         }
     }
 });
+

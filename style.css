@@ -130,6 +130,9 @@ body{
 }
 
 .aside i{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2.5px;
     font-size: 25px;
 }
 
@@ -233,6 +236,7 @@ body{
     display: flex;
     justify-content: end;
     font-size: 20px;
+    margin-bottom: 5px;
 }
 
 .button{
@@ -244,28 +248,28 @@ body{
 }
 
 .box-product {
-    height: 37rem;
+    height: 30rem;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 1rem;
     overflow: hidden;
 }
 
-.linechart-product{
-    max-width: 45rem;
-    height: 23.5rem;
+.chart-product{
+    max-width: 55rem;
+    height: 23rem;
     padding: 25px;
     border-radius: 20px;
     background-color: var(--bg-black-100);
 }
 
-.linechart-product h1{
+.chart-product h1{
     color: var(--text-black-100);
     font-size: 25px;
 }
 
 .latest-order{
-    max-width: 45rem;
-    height: 23.5rem;
+    max-width: 55rem;
+    height: 23rem;
     padding: 25px;
     border-radius: 20px;
     background-color: var(--bg-black-100);
@@ -273,5 +277,35 @@ body{
 
 .latest-order h2{
     color: var(--text-black-100);
+    font-size: 25px;
 }
 
+.items{
+    color: var(--text-black-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.items li{
+    background: var(--bg-black-100);
+    padding: 10px;
+    padding-right: 55px;
+    padding-left: 55px;
+    border-radius: 50px;
+}
+
+.button i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2.5px;
+}
+
+.product-view{
+    margin-left: 85px;
+    background: var(--bg-black-100);
+    max-width: 35rem;
+    height: 55rem;
+}
