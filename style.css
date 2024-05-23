@@ -153,9 +153,9 @@ body{
     padding-right: 15px;
 }
 
-.row{
+/* .row{
     margin-bottom: 20px;
-}
+} */
 
 .box {
     width: 23rem;
@@ -248,64 +248,104 @@ body{
 }
 
 .box-product {
-    height: 30rem;
     border-radius: 10px;
     padding: 1rem;
     overflow: hidden;
-}
+  }
+  
+  .total-sales {
+    height: 30rem;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    background-color: var(--bg-black-100);
+  }
 
-.chart-product{
-    max-width: 55rem;
-    height: 23rem;
+  .latest-order{
+    height: fit-content;
     padding: 25px;
     border-radius: 20px;
     background-color: var(--bg-black-100);
-}
+    margin-bottom: 5rem;
+  }
 
-.chart-product h1{
+  .product-linechart{
+    height: 15rem;
+  }
+  
+  .total-sales h1,
+  .latest-order h2 {
     color: var(--text-black-100);
     font-size: 25px;
-}
-
-.latest-order{
-    max-width: 55rem;
-    height: 23rem;
-    padding: 25px;
-    border-radius: 20px;
+  }
+  
+  .product-view {
+    background: var(--bg-black-100);
+    display: grid;
+    grid-template-rows: 1fr; /* One row that takes up all available space */
+    grid-gap: 10px;
+    height: 100%;
+  }
+  
+  .items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .items ol {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .items li {
+    color: var(--text-black-100);
+    font-size: 18px;
+  }
+  
+  .item-view {
     background-color: var(--bg-black-100);
-}
-
-.latest-order h2{
+    height: 25rem;
+    margin-top: 5px;
+    border-radius: 10px;
+  }
+  
+  .product-details {
+    background-color: var(--bg-gray-200);
     color: var(--text-black-100);
-    font-size: 25px;
-}
-
-.items{
-    color: var(--text-black-100);
+  }
+  
+  .table-orders {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-    font-size: 25px;
 }
 
-.items li{
-    background: var(--bg-black-100);
-    padding: 10px;
-    padding-right: 55px;
-    padding-left: 55px;
-    border-radius: 50px;
+table {
+    color: var(--text-black-900);
+    border-spacing: 20px;
 }
 
-.button i {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 2.5px;
+table th, table td {
+    padding: 1rem; /* Add padding to th and td */
+    padding-top: 2rem;
 }
 
-.product-view{
-    margin-left: 85px;
-    background: var(--bg-black-100);
-    max-width: 35rem;
-    height: 55rem;
+table thead {
+    font-size: 1.5rem;
 }
+
+table tbody, thead{
+    text-align: center;
+}
+
+table th {
+    color: #FF5757;
+}
+
+table tbody {
+    margin-top: 20px; /* Add margin-top to create space between thead and tbody */
+}
+
+  

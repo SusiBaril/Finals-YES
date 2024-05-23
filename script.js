@@ -71,3 +71,42 @@ new Chart(ctxPie, {
     }
 });
 
+const ctxLine2 = document.getElementById('myChart1');
+
+new Chart(ctxLine, {
+    type: 'line',
+    data: {
+        labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+                label: 'Brand',
+                data: [3000, 2500, 3000, 5000, 4000, 3000, 3500],
+                borderColor: '#FF66C4',
+                borderWidth: 2
+            },
+            {
+                label: 'Tools',
+                data: [2000, 1500, 2000, 3000, 2000, 1500, 2400],
+                borderColor: '#A375FF',
+                borderWidth: 2
+            },
+            {
+                label: 'Stock',
+                data: [1000, 1500, 2000, 2500, 3000, 2000, 1000],
+                borderColor: '#FF914D',
+                borderWidth: 2
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    color: 'white' // set legend text color to white
+                  }
+            }
+        }
+    }
+});
+
