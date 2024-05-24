@@ -52,39 +52,39 @@
         <section class="home section" id="home">
             <div class="welcome-user">
                 <!-- Display of Username -->
-                <h2>Welcome, Username</h2> 
+                <h2>Welcome, Username!</h2> 
             </div>
 
             <!-- Analytics -->
 
             <div class="container-fluid">
-              <div class="row mr-1">
+              <div class="row">
                 <div class="col-md-3">
                   <div class="box">
                     <h3>Total Sales</h3>
                     <h1>999</h1>
-                    <p><span>100%</span> +2.8k this week</p>
+                    <p><span>100%</span> +₱2.8k this week</p>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="box">
                     <h3>Total Customers</h3>
                     <h1>999</h1>
-                    <p><span>100%</span> +2.8k this week</p>
+                    <p><span>100%</span> +₱2.8k this week</p>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="box">
                     <h3>Transaction History</h3>
                     <h1>999</h1>
-                    <p><span>100%</span> +2.8k this week</p>
+                    <p><span>100%</span> +₱2.8k this week</p>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="box">
                     <h3>Product in Stocks</h3>
                     <h1>999</h1>
-                    <p><span>100%</span> +2.8k this week</p>
+                    <p><span>100%</span> +₱2.8k this week</p>
                   </div>
                 </div>
               </div>
@@ -126,75 +126,230 @@
             <h1>Products</h1>
           </div>
 
-          <div class="addproduct">
-            <div class="button"><i class="bx bx-plus" style="font-size: 2rem; vertical-align: middle;"></i>Add Product</div>
-          </div>
+          <!-- Chart of Sales -->
 
-          <div class="container-fluid">
-            <div class="row grid" style="align-items: center;">
-              <div class="col-md-7">
-                <div class="box-product total-sales">
-                  <h1>Total Sales</h1>
-                  <div class="product-linechart">
-                    <canvas id="myChart1"></canvas>
+          <div class="products">
+            <div class="container-fluid">
+              <div class="row grid" style="align-items: center; margin-top: 50px;">
+                <div class="col-md-7">
+
+                  <!-- Top Product Chart -->
+
+                  <div class="box-product total-sales">
+                    <h1>Top Product</h1>
+                    <div class="product-barchart">
+                      <canvas id="barchart"></canvas>
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              <!-- TO VIEW THE PRODUCT -->
+                  <div class="box-product latest-order">
+                    <h2>Latest Orders</h2>
 
-              <div class="col-md-5" style="margin: 0;">
-                <div class="box-product product-view">
-                  <ol class="items">
-                    <li>Items</li>
-                    <li>Product</li>
-                    <li>Price</li>
-                  </ol>
+                    <!--Latest Order  -->
+
+                    <div class="table-orders">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Order Id</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Payment</th>
+                            <th>Transaction Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Gear Oil</td>
+                            <td>PHP200.00</td>
+                            <td>Cash</td>
+                            <td>29/08/2023</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- paginationHTMl insert Here -->
+
+                  </div>
+
                 </div>
-                <div class="item-view">
-                  <div class="product-details">
+  
+                <!-- To add item for Customer Order -->
+  
+                <div class="col-md-5">
+                  <div class="item-view">
+                    <div class="product-details">
+
+                      <div class="items">
+                        <h2>Customer Order</h2>
+                      </div>
+  
+                      <form class="form-group row">
+                        <div class="col-md-8 mb-3">
+                          <label for="category" class="form-label" style="font-size: 1rem;">Category:</label>
+                          <select id="category" name="category" class="form-select">
+                            <option value="">Select Category</option>
+                            <option value="oil">Oil</option>
+                            <option value="car accesories">Car Accesories</option>
+                            <option value="fluid">Fluid</option>
+                            <option value="auto parts">Auto Parts</option>
+                          </select>
+                        </div>
+                        <div class="col-md-8 mb-3">
+                          <label for="item" class="form-label" style="font-size: 1rem;">Item:</label>
+                          <input type="text" class="form-control" id="item" name="item" placeholder="Enter item name">
+                        </div>
+                        <div class="col-md-8 mb-3">
+                          <label for="quantity" class="form-label" style="font-size: 1rem;">Quantity:</label>
+                          <input type="number" class="form-control" id="quantity" name="quantity" min="1" placeholder="Enter quantity">
+                        </div>
+                        <div class="col-6 text-center" style="margin-top: 15px;">
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                      </form>
                     
-                  </div>
-                </div>
-              </div>
-
-              <!-- TO VIEW LATEST ORDER -->
-
-              <div class="col-md-7">
-                <div class="box-product latest-order">
-                  <h2>Latest Orders</h2>
-                  <div class="table-orders">
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Order Id</th>
-                          <th>Product Name</th>
-                          <th>Price</th>
-                          <th>Payment</th>
-                          <th>Transaction Date</th>
-                          <th>Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td>Gear Oil</td>
-                          <td>PHP200.00</td>
-                          <td>Cash</td>
-                          <td>29/08/2023</td>
-                          <td>
-                            <button type="submit" class="btn btn-primary">
-                              View
-                            </button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
           
+        </section>
+
+        <!-- Transaction section -->
+
+        <section class="transaction section" id="transaction">
+
+          <div class="title-product">
+            <h1>Transactions</h1>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-7">
+
+                <!-- Calculate the Income -->
+                <div class="income">
+
+                  <h3>Income & Spending</h3>
+                  <h4 class="increase">+ ₱5,000</h4>
+                  <h4>&</h4>
+                  <h4 class="decrease">- ₱2,000</h4>
+
+                  <!-- Selection of Date to view Income -->
+
+                </div>
+
+                <!-- Transaction of the Customer -->
+                <div class="transactions">
+                  <div class="trans-head">
+                    <h3>Transaction</h3>
+
+                    <!-- Selection of Date to view Transaction -->
+
+                  </div>
+
+                  <!-- Table for Transaction -->
+
+                  <div class="table-trans">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Customer Number</td>
+                          <td>Payment Method</td>
+                          <td>Price</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="col-md-5">
+                <div class="order-recent">
+                  <h2>Recent Purchase</h2>
+
+                  <!-- Recent Purchases -->
+                  <div class="recent-pur">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Product</th>
+                          <th>Customer Numer</th>
+                          <th>Date</th>
+                          <th>Price</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Oil</td>
+                          <td>#563927</td>
+                          <td>5/24/2023</td>
+                          <td>₱1500</td>
+                          <td><span class="text-success">Success</span></td>
+                        </tr>
+                        <tr>
+                          <td>Tail Light</td>
+                          <td>#123453</td>
+                          <td>5/18/2023</td>
+                          <td>₱2500</td>
+                          <td><span class="text-danger">Failed</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- paginationHTMl insert Here -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Stock Section -->
+
+        <section class="stock section" id="stock">
+
+          <div class="title-product">
+            <h1>Stocks</h1>
+          </div>
+
+          <div class="stocks">
+
+            <div class="addproduct">
+              <div class="button"><i class="bx bx-plus" style="font-size: 2rem; vertical-align: middle;"></i>Add Product</div>
+            </div>
+
+            <div class="container my-1">
+              <div class="card">
+                <img src="uploads/example.jpg" class="card-img-top" alt="Item Image">
+                <div class="card-body">
+                  <h5 class="card-title">Item Name</h5>
+                  <p class="card-text">Price: $10</p>
+                  <p class="card-text">Quantity: 2</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn btn-success">
+                      <i class='bx bxs-edit' style="font-size: 25px; vertical-align: middle;"></i>
+                    </button>
+                    <button class="btn btn-danger">
+                      <i class='bx bx-trash' style="font-size: 25px; vertical-align: middle;"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- paginationHTML insert Here -->
+
+          </div>
+
         </section>
 
       </div>
