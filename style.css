@@ -560,3 +560,9 @@ body{
 .complete-order i {
     font-size: 25px;
 }
+
+.totalsales{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
