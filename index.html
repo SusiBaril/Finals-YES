@@ -35,7 +35,6 @@
             <li><a href="#product" style="text-decoration:none;"><i class="bx bx-package"></i>Product</a></li>
             <li><a href="#transaction" style="text-decoration:none;"><i class="bx bx-cart"></i>Transaction</a></li>
             <li><a href="#stock" style="text-decoration:none;"><i class="bx bx-store"></i>Stock</a></li>
-            <li><a href="#customer" style="text-decoration:none;"><i class="bx bx-user"></i>Customer</a></li>
             <li><a href="#sales" style="text-decoration:none;"><i class="bx bx-dollar"></i>Total Sale</a></li>
         </ul>
 
@@ -98,7 +97,7 @@
             <!-- Charts -->
 
             <div class="container-fluid">
-              <div class="row mr-1">
+              <div class="row">
                 <div class="col-md-7">
                   <div class="box-a">
                     <div class="linechart">
@@ -106,7 +105,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4">
                   <div class="box-b">
                     <div class="piechart">
                       <canvas id="pieChart"></canvas>
@@ -185,9 +184,11 @@
                       <div class="items">
                         <h2>Customer Order</h2>
                       </div>
+
+                      <!-- Customer Order Form -->
   
                       <form class="form-group row">
-                        <div class="col-md-8 mb-3">
+                        <div class="col-md-10 mb-3">
                           <label for="category" class="form-label" style="font-size: 1rem;">Category:</label>
                           <select id="category" name="category" class="form-select">
                             <option value="">Select Category</option>
@@ -197,16 +198,29 @@
                             <option value="auto parts">Auto Parts</option>
                           </select>
                         </div>
-                        <div class="col-md-8 mb-3">
+                        <div class="col-md-5 mb-3">
+                          <label for="item" class="form-label" style="font-size: 1rem;">Customer Name:</label>
+                          <input type="text" class="form-control" id="item" name="item" placeholder="Enter Customer name">
+                        </div>
+                        <div class="col-md-5 mb-3">
                           <label for="item" class="form-label" style="font-size: 1rem;">Item:</label>
                           <input type="text" class="form-control" id="item" name="item" placeholder="Enter item name">
                         </div>
-                        <div class="col-md-8 mb-3">
+                        <div class="col-md-5 mb-3">
                           <label for="quantity" class="form-label" style="font-size: 1rem;">Quantity:</label>
                           <input type="number" class="form-control" id="quantity" name="quantity" min="1" placeholder="Enter quantity">
                         </div>
+                        <div class="col-md-5 mb-3">
+                          <label for="category" class="form-label" style="font-size: 1rem;">Payment:</label>
+                          <select id="category" name="category" class="form-select">
+                            <option value="">Select Payment</option>
+                            <option value="cash">Cash</option>
+                            <option value="card">Debit/Card</option>
+                            <option value="e-wallet">E-Wallet</option>
+                          </select>
+                        </div>
                         <div class="col-6 text-center" style="margin-top: 15px;">
-                          <button type="submit" class="btn btn-primary">Submit</button>
+                          <button type="submit" class="btn btn-danger">Submit</button>
                         </div>
                       </form>
                     
@@ -236,8 +250,6 @@
 
                   <h3>Income & Spending</h3>
                   <h4 class="increase">+ ₱5,000</h4>
-                  <h4>&</h4>
-                  <h4 class="decrease">- ₱2,000</h4>
 
                   <!-- Selection of Date to view Income -->
 
@@ -328,19 +340,25 @@
             </div>
 
             <div class="container my-1">
-              <div class="card">
-                <img src="uploads/example.jpg" class="card-img-top" alt="Item Image">
-                <div class="card-body">
-                  <h5 class="card-title">Item Name</h5>
-                  <p class="card-text">Price: $10</p>
-                  <p class="card-text">Quantity: 2</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <button class="btn btn-success">
-                      <i class='bx bxs-edit' style="font-size: 25px; vertical-align: middle;"></i>
-                    </button>
-                    <button class="btn btn-danger">
-                      <i class='bx bx-trash' style="font-size: 25px; vertical-align: middle;"></i>
-                    </button>
+              <div class="card-container">
+                <div class="card">
+                  <!-- Image -->
+                  <img src="uploads/example.jpg" class="card-img-top" alt="Item Image">
+                  <div class="card-body">
+                    <!-- Item Name -->
+                    <h5 class="card-title">Item Name</h5>
+                    <!-- Item Price -->
+                    <p class="card-text">Price: $10</p>
+                    <!-- Item Quantity -->
+                    <p class="card-text">Quantity: 2</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <button class="btn btn-success">
+                        <i class='bx bxs-edit' style="font-size: 25px; vertical-align: middle;"></i>
+                      </button>
+                      <button class="btn btn-danger">
+                        <i class='bx bx-trash' style="font-size: 25px; vertical-align: middle;"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -348,6 +366,73 @@
 
             <!-- paginationHTML insert Here -->
 
+          </div>
+
+        </section>
+
+        <!-- Total Sales Section -->
+
+        <section class="sales section" id="sales">
+
+          <div class="title-product">
+            <h1>Total Sales</h1>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row mr-1">
+              <div class="col md-6">
+                <div class="item-sales">
+                  <div class="item-sales-title">
+                    <h3>Item Sales</h3>
+                  </div>
+                  <div class="item-sales-chart">
+                    <div class="linecharts">
+                      <canvas id="linechart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col md-2">
+                <div class="sales-cat">
+                  <h3>Sales By Category</h3>
+                </div>
+                <div class="item-sales-pie">
+                  <div class="piecharts">
+                    <canvas id="pieschart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mr-1">
+              <div class="col md-3">
+                <div class="total-income">
+                  <i class='bx bx-money'></i>
+                  <h4>Total Income</h4>
+                  <h1>₱15,000.00</h1>
+                </div>
+              </div>
+              <div class="col md-3">
+                <div class="inquiry-succsess">
+                  <i class='bx bx-line-chart' ></i>
+                  <h4>Inquiry Success Rate</h4>
+                  <h1>56%</h1>
+                </div>
+              </div>
+              <div class="col md-3">
+                <div class="new-customer">
+                  <i class='bx bx-user' ></i>
+                  <h4>Number of New Customers</h4>
+                  <h1>42</h1>
+                </div>
+              </div>
+              <div class="col md-3">
+                <div class="complete-order">
+                  <i class='bx bxs-check-square' ></i>
+                  <h4>Number of Completed Orders</h4>
+                  <h1>38</h1>
+                </div>
+              </div>
+            </div>
           </div>
 
         </section>

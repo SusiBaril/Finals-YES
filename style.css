@@ -194,27 +194,24 @@ body{
 }
 
 .box-a {
-    height: 37rem;
     border-radius: 10px;
     padding: 2rem;
-    overflow: hidden;
+    margin: 0;
 }
 
 .linechart {
-    max-width: 50rem;
     padding: 25px;
     border-radius: 20px;
     background-color: var(--bg-black-100);
 }
 
 .box-b {
-    height: 37rem;
     border-radius: 10px;
     padding: 2rem;
+    margin: 0;
 }
 
 .piechart{
-    max-width: 26rem;
     padding: 2rem;
     border-radius: 20px;
     background-color: var(--bg-black-100);
@@ -227,6 +224,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 25px;
 }
 
 .addproduct{
@@ -369,10 +367,6 @@ body{
     color: #00BF63;
 }
 
-.decrease{
-    color: #F85050;
-}
-
 .transactions{
     background-color: var(--bg-black-100);
     color: var(--text-black-900);
@@ -455,10 +449,11 @@ body{
 
 .stocks{
     max-width: 100%;
-    height: fit-content;
+    height: auto-fit;
     background-color: var(--bg-black-100);
     margin-top: 25px;
     border-radius: 20px;
+    margin-bottom: 25px;
 }
 
 .button{
@@ -477,7 +472,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 5px 15px 5px;
+    margin: 15px 5px 15px 5px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .card img {
@@ -487,23 +490,73 @@ body{
     max-height: 100%;
 }
 
-  .card-body {
+.card-body {
     padding: 1.25rem;
-  }
+}
 
-  .card-title {
+.card-title {
     font-weight: bold;
     margin-bottom: 0.75rem;
     color: var(--bg-black-100);
-  }
+}
 
-  .card-text {
+.card-text {
     color: var(--bg-black-100);
     margin-bottom: 0.5rem;
-  }
+}
 
-  .btn {
+.btn {
     margin: 0 2px 0 2px;
     width: 100%;
-  }
-  
+}
+
+  /* Sales Section */
+
+.item-sales-title{
+    color: var(--text-black-900);
+    margin-left: 15px;
+}
+
+.item-sales-chart{
+    background-color: var(--bg-black-100);
+    width: 60rem;
+    height: 32rem;
+    border-radius: 20px;
+    padding: 60px;
+}
+
+.sales-cat{
+    color: var(--text-black-900);
+    margin-left: 15px;
+}
+
+.item-sales-pie{
+    background-color: var(--bg-black-100);
+    width: 30rem;
+    height: 32rem;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.total-income, .inquiry-succsess, .new-customer, .complete-order{
+    background-color: var(--bg-black-100);
+    color: var(--text-black-900);
+    height: 10rem;
+    padding: 25px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.total-income h4,
+.inquiry-succsess h4,
+.new-customer h4,
+.complete-order h4 {
+    font-size: 15px;
+}
+
+.total-income i,
+.inquiry-succsess i,
+.new-customer i,
+.complete-order i {
+    font-size: 25px;
+}
