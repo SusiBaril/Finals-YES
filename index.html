@@ -26,8 +26,12 @@
       
       <div class="aside">
 
+        <div class="navbar-logo">
+          <a href="index.html"><img src="import/Dynrax Web Finals.png"></a>
+        </div>
+
         <div class="navbar-toggle">
-            <span><i class="bx bx-menu"></i></span>
+            <span></span>
         </div>
 
         <ul class="nav">
@@ -48,7 +52,7 @@
       <div class="main-content">
 
         <!-- Home Section -->
-        <section class="home section" id="home">
+        <section class="home active section" id="home">
             <div class="welcome-user">
                 <!-- Display of Username -->
                 <h2>Welcome, Username!</h2> 
@@ -89,24 +93,25 @@
               </div>
             </div>
 
-            <div class="titles-home">
-              <h3>Total Sales</h3>
-              <h3>Sales Category</h3>
-            </div>
-
             <!-- Charts -->
 
             <div class="container-fluid">
-              <div class="row">
+              <div class="row mr-1">
                 <div class="col-md-7">
+                  <div class="titles-home">
+                    <h3>Total Sales</h3>
+                  </div>
                   <div class="box-a">
                     <div class="linechart">
                       <canvas id="myChart"></canvas>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-5">
                   <div class="box-b">
+                    <div class="titles-home">
+                      <h3>Sales Category</h3>
+                    </div>
                     <div class="piechart">
                       <canvas id="pieChart"></canvas>
                     </div>
@@ -129,13 +134,16 @@
 
           <div class="products">
             <div class="container-fluid">
-              <div class="row grid" style="align-items: center; margin-top: 50px;">
+              <div class="row grid" style="align-items: center;">
                 <div class="col-md-7">
 
                   <!-- Top Product Chart -->
 
-                  <div class="box-product total-sales">
+                  <div class="titles-home">
                     <h1>Top Product</h1>
+                  </div>
+
+                  <div class="total-sales">
                     <div class="product-barchart">
                       <canvas id="barchart"></canvas>
                     </div>
@@ -379,31 +387,21 @@
           </div>
 
           <div class="container-fluid">
-            <div class="totalsales">
-              <div class="row mr-1">
-                <div class="col md-6">
-                  <div class="item-sales">
-                    <div class="item-sales-title">
-                      <h3>Item Sales</h3>
-                    </div>
-                    <div class="item-sales-chart">
-                      <div class="linecharts">
-                        <canvas id="linechart"></canvas>
-                      </div>
-                    </div>
+            <div class="row mr-1">
+              <div class="col-md-7">
+                  <div class="item-sales-title">
+                    <h3>Items Sales</h3>
                   </div>
+                  <div class="item-sales-chart">
+                    <canvas id="linechart"></canvas>
+                  </div>
+              </div>
+              <div class="col-md-5">
+                <div class="item-sales-title">
+                  <h3>Sales By Category</h3>
                 </div>
-                <div class="col md-4">
-                  <div class="catsales">
-                    <div class="sales-cat">
-                      <h3>Sales By Category</h3>
-                    </div>
-                    <div class="item-sales-pie">
-                      <div class="piecharts">
-                        <canvas id="pieschart"></canvas>
-                      </div>
-                    </div>
-                  </div>
+                <div class="item-sales-pie">
+                  <canvas id="pieschart"></canvas>
                 </div>
               </div>
             </div>
