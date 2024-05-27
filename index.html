@@ -199,43 +199,26 @@
                       </div>
 
                       <!-- Customer Order Form -->
-  
-                      <form class="form-group row">
-                        <div class="col-md-10 mb-3">
-                          <label for="category" class="form-label" style="font-size: 1rem;">Category:</label>
-                          <select id="category" name="category" class="form-select">
-                            <option value="">Select Category</option>
-                            <option value="oil">Oil</option>
-                            <option value="car accesories">Car Accesories</option>
-                            <option value="fluid">Fluid</option>
-                            <option value="auto parts">Auto Parts</option>
-                          </select>
+                      
+                      <div class="addsearch">
+                        <div class="search-bar">
+                          <input type="text" class="form-control" placeholder="Search products...">
                         </div>
-                        <div class="col-md-5 mb-3">
-                          <label for="item" class="form-label" style="font-size: 1rem;">Customer Name:</label>
-                          <input type="text" class="form-control" id="item" name="item" placeholder="Enter Customer name">
-                        </div>
-                        <div class="col-md-5 mb-3">
-                          <label for="item" class="form-label" style="font-size: 1rem;">Item:</label>
-                          <input type="text" class="form-control" id="item" name="item" placeholder="Enter item name">
-                        </div>
-                        <div class="col-md-5 mb-3">
-                          <label for="quantity" class="form-label" style="font-size: 1rem;">Quantity:</label>
-                          <input type="number" class="form-control" id="quantity" name="quantity" min="1" placeholder="Enter quantity">
-                        </div>
-                        <div class="col-md-5 mb-3">
-                          <label for="category" class="form-label" style="font-size: 1rem;">Payment:</label>
-                          <select id="category" name="category" class="form-select">
-                            <option value="">Select Payment</option>
-                            <option value="cash">Cash</option>
-                            <option value="card">Debit/Card</option>
-                            <option value="e-wallet">E-Wallet</option>
-                          </select>
-                        </div>
-                        <div class="col-6 text-center" style="margin-top: 15px;">
-                          <button type="submit" class="btn btn-danger">Submit</button>
-                        </div>
-                      </form>
+                      </div>
+                      <div class="view-product">
+                      </div>
+
+                      <!-- paginationHTML insert Here -->
+
+                    <div class="checkout">
+                      <div class="head"><p>My Cart</p></div>
+                      <div id="cartItem">Your cart is Empty</div>
+                      <div class="foot">
+                        <h3>Total</h3>
+                        <h2 id="total">₱ 0.00</h2>
+                        <button id="checkoutButton">Checkout</button>
+                      </div>
+                    </div>
                     
                     </div>
                   </div>
@@ -476,6 +459,7 @@
     <script src="bootstrap-4.5.3-dist/js/bootstrap.js"></script>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.js"></script>
     <script src="script.js"></script>
+    <script src="additem.js"></script>
 
 </body>
 </html>
