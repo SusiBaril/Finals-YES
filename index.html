@@ -18,6 +18,10 @@
 </head>
 <body>
 
+  <!-- header -->
+
+  
+
     <!-- Main Container -->
 
     <div class="main-container">
@@ -55,7 +59,7 @@
         <section class="home active section" id="home">
             <div class="welcome-user">
                 <!-- Display of Username -->
-                <h2>Welcome, Username!</h2> 
+                <h2>Welcome, Username!</h2>
             </div>
 
             <!-- Analytics -->
@@ -121,6 +125,7 @@
             </div>
 
         </section>
+
 
         <!-- Product Section -->
 
@@ -256,7 +261,7 @@
                 <!-- Calculate the Income -->
                 <div class="income">
 
-                  <h3>Income & Spending</h3>
+                  <h3>Income</h3>
                   <h4 class="increase">+ ₱5,000</h4>
 
                   <!-- Selection of Date to view Income -->
@@ -343,9 +348,15 @@
 
           <div class="stocks">
 
-            <div class="addproduct">
-              <div class="button"><i class="bx bx-plus" style="font-size: 2rem; vertical-align: middle;"></i>Add Product</div>
+            <div class="stockhead">
+              <div class="search-bar">
+                <input type="text" class="form-control" placeholder="Search products...">
+              </div>
+              <div class="addproduct">
+                <div class="button"><i class="bx bx-plus" style="font-size: 2rem; vertical-align: middle;"></i>Add Product</div>
+              </div>
             </div>
+          
 
             <div class="container my-1">
               <div class="card-container">
@@ -392,6 +403,9 @@
                   <div class="item-sales-title">
                     <h3>Items Sales</h3>
                   </div>
+
+                  <!-- Sales per Item -->
+
                   <div class="item-sales-chart">
                     <canvas id="linechart"></canvas>
                   </div>
@@ -400,6 +414,9 @@
                 <div class="item-sales-title">
                   <h3>Sales By Category</h3>
                 </div>
+
+                <!-- Sales per Category -->
+
                 <div class="item-sales-pie">
                   <canvas id="pieschart"></canvas>
                 </div>
@@ -409,6 +426,9 @@
               <div class="col md-3">
                 <div class="total-income">
                   <i class='bx bx-money'></i>
+
+                  <!-- View Total income of the Store -->
+
                   <h4>Total Income</h4>
                   <h1>₱15,000.00</h1>
                 </div>
@@ -416,6 +436,9 @@
               <div class="col md-3">
                 <div class="inquiry-succsess">
                   <i class='bx bx-line-chart' ></i>
+
+                  <!-- View Total Success Rate?? -->
+
                   <h4>Inquiry Success Rate</h4>
                   <h1>56%</h1>
                 </div>
@@ -423,6 +446,9 @@
               <div class="col md-3">
                 <div class="new-customer">
                   <i class='bx bx-user' ></i>
+
+                  <!-- View Total Customers per Day -->
+
                   <h4>Number of New Customers</h4>
                   <h1>42</h1>
                 </div>
@@ -430,6 +456,9 @@
               <div class="col md-3">
                 <div class="complete-order">
                   <i class='bx bxs-check-square' ></i>
+
+                  <!-- View Total Completed Orders -->
+
                   <h4>Number of Completed Orders</h4>
                   <h1>38</h1>
                 </div>
