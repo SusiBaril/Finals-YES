@@ -215,34 +215,36 @@ body{
 .dropdown {
     position: relative; /* Allows positioning the dropdown content */
     display: inline-block; /* Keeps the button inline */
-  }
-  
-  .dropdown-button {
+}
+
+.dropdown-button {
     background: none; /* Remove default button styles */
     border: none;
     padding: 10px; /* Adjust padding for desired spacing */
     cursor: pointer; /* Indicate interaction on hover */
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-menu {
     position: absolute; /* Position relative to the button */
     background-color: #fff; /* Set background color */
     min-width: 150px; /* Set minimum width for the content */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add a subtle shadow */
     z-index: 1; /* Ensure the content is on top of other elements */
     top: 100%;
-  }
-  
-  .dropdown-content a {
-    color: black; /* Set text color */
+    display: none; /* Hide by default */
+}
+
+.dropdown-menu a {
+    color: var(--bg-black-900); /* Set text color */
     padding: 12px 16px; /* Adjust padding for menu items */
     text-decoration: none; /* Remove underline */
     display: block; /* Make items take full width */
-  }
-  
-  .dropdown-content.show {  /* Add a class for toggling visibility */
+}
+
+.dropdown-menu.show {  /* Add a class for toggling visibility */
     display: block;
-  }
+}
+
 /* Home Section */
 
 .container {
