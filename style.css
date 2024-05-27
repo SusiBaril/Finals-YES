@@ -7,6 +7,7 @@
     --text-black-900:#ffffff;
     --text-black-700:#dfdfdf;
     --text-black-100:#ffffff;
+    --text-black-200:#111111;
 }
 
 body{
@@ -235,7 +236,7 @@ body{
 }
 
 .dropdown-menu a {
-    color: var(--bg-black-900); /* Set text color */
+    color: var(--text-black-100); /* Use the custom CSS variable */
     padding: 12px 16px; /* Adjust padding for menu items */
     text-decoration: none; /* Remove underline */
     display: block; /* Make items take full width */
@@ -243,6 +244,7 @@ body{
 
 .dropdown-menu.show {  /* Add a class for toggling visibility */
     display: block;
+    color: var(--bg-black-900);
 }
 
 /* Home Section */
