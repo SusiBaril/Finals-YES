@@ -83,13 +83,7 @@ body{
     z-index: 10;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     transition: all 0.3s ease;
-}
-
-.navbar-logo{
-    height: 10px;
-    width: 15px;
 }
 
 .navbar-logo img{
@@ -168,37 +162,6 @@ body{
     left: 0;
 }
 
-.nav-more {
-    align-self: flex-end;
-}
-
-.aside .nav-more {
-    padding-top: 5rem;
-    margin: 2rem 5rem 0 0;
-}
-
-.aside .nav-more li {
-    margin-bottom: 25px;
-    display: block;
-}
-
-.aside .nav-more li a {
-    font-size: 20px;
-    font-weight: 600;
-    display: block;
-    color: var(--text-black-900);
-    padding: 5px 15px;
-}
-
-.aside .nav-more li a.active {
-    background-color: #FF5757;
-    border-radius: 10px;
-}
-
-.aside .nav-more li a i {
-    margin-right: 10px;
-}
-
 .aside i{
     display: inline-block;
     vertical-align: middle;
@@ -212,40 +175,6 @@ body{
     margin-bottom: 30px;
 }
 
-/* Make sure this CSS is included in your HTML */
-.dropdown {
-    position: relative; /* Allows positioning the dropdown content */
-    display: inline-block; /* Keeps the button inline */
-}
-
-.dropdown-button {
-    background: none; /* Remove default button styles */
-    border: none;
-    padding: 10px; /* Adjust padding for desired spacing */
-    cursor: pointer; /* Indicate interaction on hover */
-}
-
-.dropdown-menu {
-    position: absolute; /* Position relative to the button */
-    background-color: #fff; /* Set background color */
-    min-width: 150px; /* Set minimum width for the content */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add a subtle shadow */
-    z-index: 1; /* Ensure the content is on top of other elements */
-    top: 100%;
-    display: none; /* Hide by default */
-}
-
-.dropdown-menu a {
-    color: var(--text-black-100); /* Use the custom CSS variable */
-    padding: 12px 16px; /* Adjust padding for menu items */
-    text-decoration: none; /* Remove underline */
-    display: block; /* Make items take full width */
-}
-
-.dropdown-menu.show {  /* Add a class for toggling visibility */
-    display: block;
-    color: var(--bg-black-900);
-}
 
 /* Home Section */
 
@@ -725,6 +654,8 @@ body{
     max-width: 55rem;
   }
 
+  
+
 .card {
     max-width: 15rem;
     border: 1px solid #ddd;
@@ -734,6 +665,8 @@ body{
     align-items: center;
     margin: 15px 5px 15px 5px;
 }
+
+
 
 .card-container {
     display: flex;

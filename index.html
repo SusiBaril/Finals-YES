@@ -10,7 +10,6 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
 
     <!-- Boxicon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -45,16 +44,6 @@
             <li><a href="#sales" style="text-decoration:none;"><i class="bx bx-dollar"></i>Total Sale</a></li>
         </ul>
     
-        <div class="nav-more dropdown dropup">
-            <button class="dropdown-button" data-toggle="dropdown">
-                <i class="bx bx-user"></i> <span class="username">John Doe</span> <i class="bx bx-chevron-up"></i>
-            </button>
-            <ul class="dropdown-content dropdown-menu">
-                <li><a class="dropdown-item" href="#">Change Password</a></li>
-                <li><a class="dropdown-item" href="#">Add Users</a></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
-            </ul>
-        </div>
     </div>
 
       <!-- Main Content -->
@@ -341,7 +330,53 @@
                 <input type="text" class="form-control" placeholder="Search products...">
               </div>
               <div class="addproduct">
-                <div class="button"><i class="bx bx-plus" style="font-size: 2rem; vertical-align: middle;"></i>Add Product</div>
+                <button class="button" data-toggle="modal" data-target="#addProductModal">Add Product</button>
+              </div>
+            </div>
+
+            <!-- Add Product Modal -->
+
+            <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="productImage" class="form-label">Product Image</label>
+                        <input type="file" class="form-control" id="productImage">
+                      </div>
+                      <div class="mb-3">
+                        <label for="productName" class="form-label">Product Name</label>
+                        <input type="text" class="form-control" id="productName">
+                      </div>
+                      <div class="mb-3">
+                        <label for="productCategory" class="form-label">Category</label>
+                        <select class="form-select" id="productCategory">
+                          <option value="1">Category 1</option>
+                          <option value="2">Category 2</option>
+                          <option value="3">Category 3</option>
+                          <!-- Add more options as needed -->
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="productQuantity" class="form-label">Quantity</label>
+                        <input type="number" class="form-control" id="productQuantity">
+                      </div>
+                      <div class="mb-3">
+                        <label for="productPrice" class="form-label">Price</label>
+                        <input type="text" class="form-control" id="productPrice">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Add Product</button>
+                  </div>
+                </div>
               </div>
             </div>
           
@@ -459,10 +494,18 @@
       </div>
 
     </div>
-    
+
+    <script>
+      $(document).ready(function(){
+        // Activate modal
+        $('#addProductModal').modal();
+      });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="bootstrap-4.5.3-dist/js/bootstrap.js"></script>
-    <script src="bootstrap-5.3.3-dist/js/bootstrap.js"></script>
     <script src="script.js"></script>
     <script src="additem.js"></script>
 
