@@ -195,10 +195,19 @@
                       <!-- Customer Order Form -->
                       
                       <div class="addsearch">
-                        <div class="search-bar">
+                        <div class="searchbar">
                           <input type="text" class="form-control" placeholder="Search products...">
+                          <div class="mb-3">
+                            <label for="productCategory" class="form-label">Category</label>
+                            <select class="form-select" id="productCategory">
+                              <option value="0">Select Category</option>
+                              <option value="1">Auto Parts</option>
+                              <option value="2">Oil/Fluids</option>
+                              <option value="3">Car Accessories</option>
+                            </select>
+                          </div>
                         </div>
-                      </div>
+                        </div>
                       <div class="view-product">
                       </div>
 
@@ -325,81 +334,48 @@
 
           <div class="stocks">
 
-            <div class="stockhead">
-              <div class="search-bar">
-                <input type="text" class="form-control" placeholder="Search products...">
-              </div>
-              <div class="addproduct">
-                <button class="button" data-toggle="modal" data-target="#addProductModal">Add Product</button>
-              </div>
-            </div>
-
-            <!-- Add Product Modal -->
-
-            <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+              <div class="stockhead">
+                <div class="search-cat">
+                  <div class="search-bar">
+                    <input type="text" class="form-control" placeholder="Search products...">
                   </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="mb-3">
-                        <label for="productImage" class="form-label">Product Image</label>
-                        <input type="file" class="form-control" id="productImage">
-                      </div>
-                      <div class="mb-3">
-                        <label for="productName" class="form-label">Product Name</label>
-                        <input type="text" class="form-control" id="productName">
-                      </div>
-                      <div class="mb-3">
-                        <label for="productCategory" class="form-label">Category</label>
-                        <select class="form-select" id="productCategory">
-                          <option value="1">Category 1</option>
-                          <option value="2">Category 2</option>
-                          <option value="3">Category 3</option>
-                          <!-- Add more options as needed -->
-                        </select>
-                      </div>
-                      <div class="mb-3">
-                        <label for="productQuantity" class="form-label">Quantity</label>
-                        <input type="number" class="form-control" id="productQuantity">
-                      </div>
-                      <div class="mb-3">
-                        <label for="productPrice" class="form-label">Price</label>
-                        <input type="text" class="form-control" id="productPrice">
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Add Product</button>
+                  <div class="stock-category">
+                    <label for="stockCategory" class="form-label">Category</label>
+                    <select class="form-select" id="stockCategory">
+                        <option value="0">Select Category</option>
+                        <option value="1">Auto Parts</option>
+                        <option value="2">Oil/Fluids</option>
+                        <option value="3">Car Accessories</option>
+                    </select>
                   </div>
                 </div>
               </div>
-            </div>
+                <div class="addproduct">
+                  <button class="button" data-toggle="modal" data-target="#addProductModal"><i class="bx bx-plus" style="font-size: 35px;"></i>Add Product</button>
+                </div>
           
 
-            <div class="container my-1">
-              <div class="card-container">
-                <div class="card">
-                  <!-- Image -->
-                  <img src="uploads/example.jpg" class="card-img-top" alt="Item Image">
-                  <div class="card-body">
-                    <!-- Item Name -->
-                    <h5 class="card-title">Item Name</h5>
-                    <!-- Item Price -->
-                    <p class="card-text">Price: $10</p>
-                    <!-- Item Quantity -->
-                    <p class="card-text">Quantity: 2</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <button class="btn btn-success">
-                        <i class='bx bxs-edit' style="font-size: 25px; vertical-align: middle;"></i>
-                      </button>
-                      <button class="btn btn-danger">
-                        <i class='bx bx-trash' style="font-size: 25px; vertical-align: middle;"></i>
-                      </button>
+            <div class="productcardview">
+              <div class="container my-1">
+                <div class="card-container">
+                  <div class="card">
+                    <!-- Image -->
+                    <img src="uploads/example.jpg" class="card-img-top" alt="Item Image">
+                    <div class="card-body">
+                      <!-- Item Name -->
+                      <h5 class="card-title">Item Name</h5>
+                      <!-- Item Price -->
+                      <p class="card-text">Price: $10</p>
+                      <!-- Item Quantity -->
+                      <p class="card-text">Quantity: 2</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-success" data-toggle="modal" data-target="#editProductModal">
+                          <i class='bx bxs-edit' style="font-size: 25px; vertical-align: middle;"></i>
+                        </button>
+                        <button class="btn btn-danger">
+                          <i class='bx bx-trash' style="font-size: 25px; vertical-align: middle;"></i>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -495,14 +471,91 @@
 
     </div>
 
-    <script>
-      $(document).ready(function(){
-        // Activate modal
-        $('#addProductModal').modal();
-      });
-    </script>
+    <!-- Add Product Modal -->
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="productImage" class="form-label">Product Image</label>
+                <div class="input-group">
+                  <input type="file" class="form-control d-none" id="productImage" aria-describedby="inputGroupFileAddon" onchange="previewImage()">
+                  <label class="input-group-text" for="productImage">
+                    <i class="bx bx-image" style="font-size: 1.5rem;"></i>
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <img id="preview" src="#" alt="Preview Image" style="max-width: 150px; display: none;">
+              </div>
+              <div class="mb-3">
+                <label for="productName" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="productName">
+              </div>
+              <div class="mb-3">
+                <label for="productCategory" class="form-label">Category</label>
+                <select class="form-select" id="productCategory">
+                  <option value="0">Select Category</option>
+                  <option value="1">Auto Parts</option>
+                  <option value="2">Oil/Fluids</option>
+                  <option value="3">Car Accessories</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="productQuantity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="productQuantity">
+              </div>
+              <div class="mb-3">
+                <label for="productPrice" class="form-label">Price</label>
+                <input type="text" class="form-control" id="productPrice">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Add Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Product Modal -->
+    <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="mb-3">
+                          <label for="editProductName" class="form-label">Product Name</label>
+                          <input type="text" class="form-control" id="editProductName">
+                      </div>
+                      <div class="mb-3">
+                          <label for="editProductPrice" class="form-label">Price</label>
+                          <input type="text" class="form-control" id="editProductPrice">
+                      </div>
+                      <div class="mb-3">
+                          <label for="editProductQuantity" class="form-label">Quantity</label>
+                          <input type="number" class="form-control" id="editProductQuantity">
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="bootstrap-4.5.3-dist/js/bootstrap.js"></script>

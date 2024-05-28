@@ -246,3 +246,23 @@ new Chart(ctxPie1, {
         }
     }
 });
+
+// Preview for the picture
+
+function previewImage() {
+    var preview = document.getElementById('preview');
+    var fileInput = document.getElementById('productImage');
+    var file = fileInput.files[0];
+    var reader = new FileReader();
+  
+    reader.onloadend = function () {
+      preview.src = reader.result;
+      preview.style.display = 'block'; // Display the image
+    }
+  
+    if (file) {
+      reader.readAsDataURL(file); // Read the file as a data URL
+    } else {
+      preview.src = ''; // Clear the preview if no file is selected
+    }
+  }
