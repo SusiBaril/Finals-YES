@@ -219,89 +219,111 @@ body{
     color: var(--text-black-900);
 }
 
-.box-a {
-    border-radius: 10px;
-    margin: 0;
-}
-
-.linechart {
-    padding: 25px;
+.lowstock{
+    background: var(--bg-black-100);
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
     border-radius: 20px;
-    background-color: var(--bg-black-100);
-    height: 44.5rem;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    margin-bottom: 25px;
 }
 
-.box-b {
+.low-stock-products {
+    margin: 0 -15px;
+  }
+  
+  .low-stock-product-card {
+    padding: 0 15px;
+  }
+  
+  .product-card {
+    background: var(--text-black-900);
     border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-details {
+    padding: 15px;
+  }
+  
+  .product-name {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  
+  .product-quantity {
     margin: 0;
-}
-
-.piechart{
-    padding: 2rem;
-    border-radius: 20px;
-    background-color: var(--bg-black-100);
-}
-
-/* Styles for screens wider than 768px (tablets and desktops) */
-@media (min-width: 768px) {
-  .container {
-    justify-content: space-between; /* Distribute boxes horizontally */
+    color: #f00;
+  }
+  
+  .product-link {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ddd;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .product-link:hover {
+    background-color: #eee;
   }
 
-  .box {
-    flex: 1; /* Make boxes shrink/grow to fill available space */
+  .topproducts {
+    margin: 0;
   }
-
-  .box h1 {
-    font-size: 100px; /* Increase font size for larger screens */
+  
+  .top-product-card {
+    padding: 0;
   }
-
-  .box h3 {
-    font-size: 28px; /* Increase font size for h3 on larger screens */
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
   }
-
-  .box p {
-    font-size: 20px; /* Increase font size for p on larger screens */
+  
+  .product-image {
+    width: 100%;
+    height: auto;
   }
-
-  .linechart,
-  .piechart {
-    height: auto; /* Allow charts to adjust height automatically */
+  
+  .product-details {
+    padding: 15px;
   }
-}
-
-/* Styles for screens smaller than 768px (phones) */
-@media (max-width: 767px) {
-  .container {
-    flex-direction: column; /* Stack boxes vertically on small screens */
+  
+  .product-name {
+    margin-top: 0;
+    margin-bottom: 5px;
   }
-
-  .box {
-    margin-bottom: 20px; /* Add space between boxes on small screens */
+  
+  .product-description {
+    margin: 0;
+    color: #666;
   }
-
-  .box h1 {
-    font-size: 60px; /* Reduce font size for h1 on smaller screens */
+  
+  .product-link {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ddd;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
   }
-
-  .box h3 {
-    font-size: 20px; /* Reduce font size for h3 on smaller screens */
+  
+  .product-link:hover {
+    background-color: #eee;
   }
-
-  .box p {
-    font-size: 16px; /* Reduce font size for p on smaller screens */
-  }
-
-  .linechart,
-  .piechart {
-    height: 300px; /* Set a fixed height for charts on small screens */
-  }
-}
-
+  
 /* Product Section */
 
 .title-product{
@@ -437,7 +459,6 @@ body{
     background-color: #fff;
     text-align: center;
     padding: 15px;
-    aspect-ratio: 1;
   }
   
   
@@ -633,6 +654,10 @@ body{
     border-radius: 20px;
     margin-bottom: 25px;
 }
+
+.stockhead{
+    border-bottom: 1px solid var(--text-black-900);
+}
   
 .button {
     cursor: pointer;
@@ -651,7 +676,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: end;
-    border-bottom: 1px solid var(--text-black-900);
+    padding-left: 400px;
 }
 
 .search-bar {
@@ -668,13 +693,45 @@ body{
     margin-bottom: 15px;
 }
 
-.productcardview{
-    max-width: 100%;
-    height: auto-fit;
-    background: var(--bg-black-100);
-    margin-top: 25px;
-    border-radius: 20px;
-    margin-bottom: 25px;
+.product-box {
+    display: flex;
+    align-items: center;
+    width: 450px; /* Adjust width as needed */
+    height: 100px; /* Adjust height based on content */
+    margin-bottom: 20px; /* Add spacing between boxes */
+}
+
+.product-details {
+    flex: 0 0 60%; /* Adjust the width of the product details */
+    padding-left: 10px; /* Add padding between image and details */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-title {
+    font-size: 18px; /* Adjust the font size */
+    margin-bottom: 5px; /* Add spacing between title and price */
+}
+
+.product-price {
+    font-size: 16px; /* Adjust the font size */
+    margin-bottom: 10px; /* Add spacing between price and button */
+}
+
+button {
+    padding: 10px 20px; /* Adjust button padding */
+    font-size: 16px; /* Adjust button font size */
+    background-color: #007bff; /* Change button background color */
+    color: red; /* Change button text color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: red; /* Change button background color on hover */
+    color: var(--text-black-900);
 }
   
 

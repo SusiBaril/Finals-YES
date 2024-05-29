@@ -35,16 +35,13 @@ function displayProducts() {
 function generateProductHTML(product) {
   const { id, image, title, price } = product;
   return `
-    <div class="product-box">
-      <div class="img-product">
-        <img class="images" src="${image}" alt="${title}">
-      </div>
-      <div class="product-details">
-        <p class="product-title">${title}</p>
+      <div class="product-box">
+        <img class="product-image" src="${image}" alt="${title}">
+        <div class="product-details">  <p class="product-title">${title}</p>
         <h2 class="product-price">₱ ${price.toFixed(2)}</h2>
+      </div>
         <button data-product-id="${id}">Add to Cart</button>
       </div>
-    </div>
   `;
 }
 
