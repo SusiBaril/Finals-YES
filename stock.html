@@ -76,7 +76,7 @@
                 
       
                   <div class="productcardview">
-                    <div class="container-fluid my-1">
+                    <div class="container-fluid my-5">
                       <div class="card-container">
                         <div class="card">
                           <!-- Image -->
@@ -115,64 +115,67 @@
     <!-- Add Product Modal -->
 
     <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="mb-3">
-                  <label for="productImage" class="form-label">Product Image</label>
-                  <div class="input-group">
-                    <input type="file" class="form-control d-none" id="productImage" aria-describedby="inputGroupFileAddon" onchange="previewImage()">
-                    <label class="input-group-text" for="productImage">
-                      <i class="bx bx-image" style="font-size: 1.5rem;"></i>
-                    </label>
-                  </div>
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h5 class="modal-title text-white" id="addProductModalLabel">Add Product</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="productImage" class="form-label text-white">Product Image</label>
+                <div class="input-group">
+                  <input type="file" class="form-control d-none" id="productImage" aria-describedby="inputGroupFileAddon" onchange="previewImage()">
+                  <label class="input-group-text" for="productImage">
+                    <i class="bx bx-image" style="font-size: 1.5rem; color: #fff;"></i>
+                  </label>
                 </div>
-                <div class="mb-3">
-                  <img id="preview" src="#" alt="Preview Image" style="max-width: 150px; display: none;">
-                </div>
-                <div class="mb-3">
-                  <label for="productName" class="form-label">Product Name</label>
-                  <input type="text" class="form-control" id="productName">
-                </div>
-                <div class="mb-3">
-                  <label for="productCategory" class="form-label">Category</label>
-                  <select class="form-select" id="productCategory">
-                    <option value="0">Select Category</option>
-                    <option value="1">Auto Parts</option>
-                    <option value="2">Oil/Fluids</option>
-                    <option value="3">Car Accessories</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label for="productQuantity" class="form-label">Quantity</label>
-                  <input type="number" class="form-control" id="productQuantity">
-                </div>
-                <div class="mb-3">
-                  <label for="productPrice" class="form-label">Price</label>
-                  <input type="text" class="form-control" id="productPrice">
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Add Product</button>
-            </div>
+              </div>
+              <div class="mb-3">
+                <img id="preview" src="#" alt="Preview Image" style="max-width: 150px; display: none;">
+              </div>
+              <div class="mb-3">
+                <label for="productName" class="form-label text-white">Product Name</label>
+                <input type="text" class="form-control" id="productName">
+              </div>
+              <div class="mb-3">
+                <label for="productCategory" class="form-label text-white">Category</label>
+                <select class="form-select" id="productCategory">
+                  <option value="0">Select Category</option>
+                  <option value="1">Auto Parts</option>
+                  <option value="2">Oil/Fluids</option>
+                  <option value="3">Car Accessories</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="productQuantity" class="form-label text-white">Quantity</label>
+                <input type="number" class="form-control" id="productQuantity">
+              </div>
+              <div class="mb-3">
+                <label for="productPrice" class="form-label text-white">Price</label>
+                <input type="text" class="form-control" id="productPrice">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger">Add Product</button>
           </div>
         </div>
       </div>
+    </div>
   
       <!-- Edit Product Modal -->
       <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
+            <div class="modal-content bg-dark">
+                <div class="modal-header" style="color: #fff;">
                     <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="color: #fff;">
                     <form>
                         <div class="mb-3">
                             <label for="editProductName" class="form-label">Product Name</label>
@@ -190,7 +193,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-danger">Save changes</button>
                 </div>
             </div>
         </div>

@@ -843,7 +843,6 @@ button:hover {
 .form-select option {
     padding: 10px;
 }
-
 /* Responsive */
 
 @media (max-width:1024px){
