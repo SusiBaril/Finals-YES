@@ -316,7 +316,6 @@ body{
 
   .product-card-top{
     background: var(--text-black-900);
-    width: 20rem;
     height: fit-content;
     border-radius: 20px;
   }
