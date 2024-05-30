@@ -104,11 +104,11 @@
                       <!-- Low stock product cards will be dynamically generated here -->
                       <div class="col-md-4 col-sm-6 col-xs-12 low-stock-product-card">
                         <div class="product-card">
-                          <img class="product-image" src="#" alt="Product Image">
+                          <img class="product-image" src="./uploads/example.jpg" alt="Product Image">
                           <div class="product-details">
                             <h4 class="product-name">Product Name</h4>
                             <p class="product-quantity">Only <strong>5</strong> left in stock!</p>
-                            <a class="product-link" href="#">View Product</a>
+                            <a class="product-link" href="stock.html">Go To Stock</a>
                           </div>
                         </div>
                       </div>
@@ -122,14 +122,21 @@
                   </div>
                   <div class="topproducts">
                     <!-- View top product of the day -->
-                    <div class="top-product-card">
-                      <div class="product-card">
-                        <img class="product-image" src="#" alt="Product Image">
-                        <div class="product-details">
-                          <h4 class="product-name">Product Name</h4>
-                          <p class="product-description">This is a short description of the product.</p>
-                          <a class="product-link" href="#">View Product</a>
+                    <div class="container-fluid my-2">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="top-product-card bg-black-100 p-3 rounded">
+                            <div class="product-card-top">
+                              <img class="product-image rounded" src="./uploads/example.jpg" alt="Product Image" width="100" height="100">
+                              <div class="product-details text-white">
+                                <h4 class="product-name">Oil</h4>
+                                <h4 class="product-category">Category:</h4>
+                                <p class="product-sales">100pcs</p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                        <!-- Add more columns for more product cards -->
                       </div>
                     </div>
                   </div>
