@@ -1,56 +1,10 @@
-// Aside Navbar
-
-const nav = document.querySelector(".nav");
-const navList = nav.querySelectorAll("li");
-const totalNavList = navList.length;
-const allSection = document.querySelectorAll(".section");
-const totalSection = allSection.length;
-
-// Loop through navigation links except the first one (usually homepage)
-for (let i = 0; i < totalNavList; i++) {
-  const a = navList[i].querySelector("a");
-
-  a.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent default anchor tag behavior
-
-    for (let i = 0; i < totalSection; i++) {
-        allSection[i].classList.remove("back-section");
-      }
-
-    // Loop through all navigation links
-    for (let j = 0; j < totalNavList; j++) {
-        if(navList[j].querySelector("a").classList.contains("active")){
-            allSection[j].classList.add("back-section");
-        }
-        navList[j].querySelector("a").classList.remove("active");
-    }
-
-    // Add active class to the clicked link
-    this.classList.add("active");
-
-    // Show corresponding section
-    showSection(this);
-  });
-}
-
-function showSection(element) {
-  // Remove active class from all sections
-  for (let i = 0; i < totalSection; i++) {
-    allSection[i].classList.remove("active");
-  }
-
-  const target = element.getAttribute("href").split("#")[1];
-  document.querySelector("#" + target).classList.add("active");
-}
 
 const navToggleBtn = document.querySelector(".navbar-toggle");
 const aside = document.querySelector(".aside"); // Assuming this is the main aside element
 
-navToggleBtn.addEventListener("click", () => {
-  aside.classList.toggle("open"); // Toggle the "open" class on the aside element
-});
+navToggleBtn.addEventListener("click", asideSectionToggleBtn);
 function asideSectionToggleBtn(){
-    aside.classList.toggle("open")
+    aside.classList.toggle("open"); // Toggle the "open" class on the aside element
 }
 
 // Products Section

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dynrax Auto Supply | Products</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.css">
+
+    <!-- Boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+    <div class="maint-container">
+
+        <div class="aside">
+            <div class="navbar-logo">
+                <a href="index.html"><img src="import/Dynrax Web Finals.png"></a>
+            </div>
+        
+            <div class="navbar-toggle">
+                <span></span>
+            </div>
+        
+            <ul class="nav">
+                <li><a href="index.html" style="text-decoration:none;"><i class="bx bx-home"></i>Home</a></li>
+                <li><a href="product.html" style="text-decoration:none;" class="active"><i class="bx bx-package"></i>Product</a></li>
+                <li><a href="transaction.html" style="text-decoration:none;"><i class="bx bx-cart"></i>Transaction</a></li>
+                <li><a href="stock.html" style="text-decoration:none;"><i class="bx bx-store"></i>Stock</a></li>
+                <li><a href="sale.html" style="text-decoration:none;"><i class="bx bx-dollar"></i>Total Sale</a></li>
+            </ul>
+        
+          </div>
+    
+        <div class="main-content">
+    
+            <section class="product section" id="product">
+    
+                <div class="title-product">
+                  <h1>Products</h1>
+                </div>
+      
+                <!-- Chart of Sales -->
+      
+                <div class="products">
+                  <div class="container-fluid">
+                    <div class="row grid" style="align-items: center;">
+                      <div class="col-md-7">
+      
+                        <!-- Top Product Chart -->
+      
+                        <div class="titles-home">
+                          <h1>Top Product</h1>
+                        </div>
+      
+                        <div class="total-sales">
+                          <div class="product-barchart">
+                            <canvas id="barchart"></canvas>
+                          </div>
+                        </div>
+      
+                        <div class="box-product latest-order">
+                          <h2>Latest Orders</h2>
+      
+                          <!--Latest Order  -->
+      
+                          <div class="table-orders">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>Order Id</th>
+                                  <th>Product Name</th>
+                                  <th>Price</th>
+                                  <th>Payment</th>
+                                  <th>Transaction Date</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Gear Oil</td>
+                                  <td>PHP200.00</td>
+                                  <td>Cash</td>
+                                  <td>29/08/2023</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+      
+                          <!-- paginationHTMl insert Here -->
+      
+                        </div>
+      
+                      </div>
+        
+                      <!-- To add item for Customer Order -->
+        
+                      <div class="col-md-5">
+                        <div class="item-view">
+                          <div class="product-details">
+      
+                            <div class="items">
+                              <h2>Customer Order</h2>
+                            </div>
+      
+                            <!-- Customer Order Form -->
+                            
+                            <div class="addsearch">
+                              <div class="searchbar">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Enter Customer Name">
+                                  </div>
+                                  <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Search products...">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mb-3">
+                                <label for="productCategory" class="form-label">Category</label>
+                                <select class="form-select" id="productCategory">
+                                  <option value="0">Select Category</option>
+                                  <option value="1">Auto Parts</option>
+                                  <option value="2">Oil/Fluids</option>
+                                  <option value="3">Car Accessories</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="view-product">
+                            </div>
+      
+                            <!-- paginationHTML insert Here -->
+      
+                          <div class="checkout">
+                            <div class="head"><p>My Cart</p></div>
+                            <div id="cartItem">Your cart is Empty</div>
+                            <div class="foot">
+                              <h3>Total</h3>
+                              <h2 id="total">₱ 0.00</h2>
+                              <button id="checkoutButton">Checkout</button>
+                            </div>
+                          </div>
+                          
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </section>
+    
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="bootstrap-4.5.3-dist/js/bootstrap.js"></script>
+    <script src="script.js"></script>
+    <script src="additem.js"></script>
+
+</body>
+</html>
