@@ -67,8 +67,18 @@
                           </div>
                         </div>
                         <div class="col-md-2">
-                          <div class="addproduct">
-                            <button class="button" data-toggle="modal" data-target="#addProductModal"><i class="bx bx-plus" style="font-size: 35px;"></i>Add Product</button>
+
+                          <div class="select-option">
+                            <div class="dropdown">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="stockCategoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-plus" style="font-size: 35px;"></i>
+                              </button>
+                            
+                              <div class="dropdown-menu" aria-labelledby="stockCategoryDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addProductModal"> Add Product</a>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addcategoryModal">Add Category</a>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -199,9 +209,37 @@
         </div>
       </div>
 
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-      <script src="bootstrap-4.5.3-dist/js/bootstrap.js"></script>
+      <div class="modal fade" id="addcategoryModal" tabindex="-1" aria-labelledby="addcategoryModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header" style="color: #fff;">
+                    <h5 class="modal-title" id="addcategoryModalLabel">Add Category</h5>
+                </div>
+                <div class="modal-body" style="color: #fff;">
+                    <form>
+                        <div class="mb-3">
+                            <label for="addcategory" class="form-label">Category</label>
+                            <input type="text" class="form-control" id="addcategory">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Save changes</button>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function() {
+          $('.dropdown-toggle').dropdown();
+        });
+      </script>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <script src="script.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
     

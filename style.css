@@ -153,6 +153,9 @@ body{
     color: var(--text-black-900);
     font-size: 35px;
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -281,8 +284,14 @@ body{
   }
   
   .product-name {
-    margin-top: 0;
-    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text-black-200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .product-description {
@@ -329,7 +338,7 @@ body{
     padding: 10px;
   }
   
-  .product-name {
+  .product-names {
     text-transform: uppercase;
     font-size: 50px;
     font-weight: bold;
@@ -351,7 +360,7 @@ body{
 
   .product-sales{
     color: green;
-    font-size: 3rem;
+    font-size: 1.5rem;
     text-align: center;
   }
   
@@ -821,6 +830,14 @@ button:hover {
 .btn {
     margin: 0 2px 0 2px;
     width: 100%;
+}
+
+.select-option{
+    display: flex;
+    justify-content: end;
+    align-content: end;
+    margin-top: 25px;
+    margin-right: 25px;
 }
 
   /* Sales Section */
