@@ -39,6 +39,23 @@
             <li><a href="stock.html" style="text-decoration:none;"><i class="bx bx-store"></i>Stock</a></li>
             <li><a href="sale.html" style="text-decoration:none;"><i class="bx bx-dollar"></i>Total Sale</a></li>
         </ul>
+
+        <!-- <div class="dropdown user-dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user-circle mr-2"></i>
+            username
+          </button>
+          <div class="dropdown-menu" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addAdminModal">
+              <i class="fas fa-user-plus mr-2"></i>
+              Add Admin
+            </a>
+            <a class="dropdown-item" href="#" onclick="logout()">
+              <i class="fas fa-sign-out-alt mr-2"></i>
+              Logout
+            </a>
+          </div>
+        </div> -->
     
       </div>
 
@@ -148,10 +165,15 @@
 
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="bootstrap-4.5.3-dist/js/bootstrap.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.dropdown-toggle').dropdown();
+      });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
     <script src="additem.js"></script>
 
