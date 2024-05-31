@@ -34,28 +34,11 @@
     
         <ul class="nav">
             <li><a href="index.html" style="text-decoration:none;" class="active"><i class="bx bx-home"></i>Home</a></li>
-            <li><a href="product.html" style="text-decoration:none;"><i class="bx bx-package"></i>Product</a></li>
+            <li><a href="product.html" style="text-decoration:none;"><i class="bx bx-package"></i>Order</a></li>
             <li><a href="transaction.html" style="text-decoration:none;"><i class="bx bx-cart"></i>Transaction</a></li>
             <li><a href="stock.html" style="text-decoration:none;"><i class="bx bx-store"></i>Stock</a></li>
             <li><a href="sale.html" style="text-decoration:none;"><i class="bx bx-dollar"></i>Total Sale</a></li>
         </ul>
-
-        <!-- <div class="dropdown user-dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user-circle mr-2"></i>
-            username
-          </button>
-          <div class="dropdown-menu" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addAdminModal">
-              <i class="fas fa-user-plus mr-2"></i>
-              Add Admin
-            </a>
-            <a class="dropdown-item" href="#" onclick="logout()">
-              <i class="fas fa-sign-out-alt mr-2"></i>
-              Logout
-            </a>
-          </div>
-        </div> -->
     
       </div>
 
@@ -106,7 +89,7 @@
               </div>
             </div>
 
-            <!-- Charts -->
+            <!-- Low Stock of Product -->
 
             <div class="container-fluid">
               <div class="row mr-1">
@@ -119,10 +102,10 @@
                       <!-- Low stock product cards will be dynamically generated here -->
                       <div class="col-md-4 col-sm-6 col-xs-12 low-stock-product-card">
                         <div class="product-card">
-                          <img class="product-image" src="./uploads/example.jpg" alt="Product Image">
-                          <div class="product-details">
-                            <h4 class="product-name">Product Name</h4>
-                            <p class="product-quantity">Only <strong>5</strong> left in stock!</p>
+                          <img class="product-images" src="./uploads/example.jpg" alt="Product Image">
+                          <div class="product-detail">
+                            <h4 class="product-names">Product Name</h4>
+                            <p class="product-quantitys">Only <strong>5</strong> left in stock!</p>
                             <a class="product-link" href="stock.html">Go To Stock</a>
                           </div>
                         </div>
@@ -131,22 +114,25 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- Top Product -->
+
                 <div class="col-md-5">
                   <div class="titles-home">
                     <h3>Top Product</h3>
                   </div>
-                  <div class="topproducts">
+                  <div class="top-products">
                     <!-- View top product of the day -->
                     <div class="container-fluid my-2">
                       <div class="row">
                         <div class="col-md-6">
-                          <div class="top-product-card bg-black-100 p-3 rounded">
+                          <div class="top-product-card">
                             <div class="product-card-top">
-                              <img class="product-image rounded" src="./uploads/example.jpg" alt="Product Image" width="50" height="50">
-                              <div class="product-details text-white">
-                                <h4 class="product-names">Oil</h4>
-                                <h4 class="product-category">Category:</h4>
-                                <p class="product-sales">100pcs</p>
+                              <img class="products-image rounded" src="./uploads/example.jpg" alt="Product Image" width="50" height="50">
+                              <div class="products-detail text-white">
+                                <h4 class="products-name">Oil</h4>
+                                <h4 class="products-category">Category:</h4>
+                                <p class="products-sale">100pcs</p>
                               </div>
                             </div>
                           </div>
