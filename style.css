@@ -38,7 +38,6 @@ body{
     opacity: 1;
     padding: 0 30px;
     font-family: "Inter", sans-serif;
-    position: fixed;
     left: 270px;
     top: 0;
     bottom: 0;
@@ -47,6 +46,14 @@ body{
     overflow-y: auto;
     overflow-x: hidden;
     padding: 15px;
+}
+
+.header .navbar{
+    background: var(--bg-black-900);
+}
+
+.nav-link{
+    color: var(--text-black-900);
 }
 
 .main-content{
@@ -214,18 +221,22 @@ body{
 
 .low-stock-products {
     margin: 0 -15px;
+    display: flex;
   }
   
   .low-stock-product-card {
-    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   
   .product-card {
     background: var(--text-black-900);
     border-radius: 10px;
-    overflow: hidden;
     margin-bottom: 20px;
     padding: 10px;
+    display: inline-block;
+    width: 50rem;
   }
   
   .product-image {
@@ -266,6 +277,7 @@ body{
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 20px;
+    max-width: 15rem;
   }
   
   .product-images {
@@ -292,26 +304,32 @@ body{
     display: block;
     margin-top: 10px;
     padding: 10px;
-    background-color: #ddd;
+    background-color: var(--bg-black-100);
     text-align: center;
     text-decoration: none;
-    color: #333;
+    color: var(--text-black-900);
+    border-radius: 20px;
   }
   
   .product-link:hover {
-    background-color: #eee;
+    background-color: red;
+    color: var(--text-black-900);
   }
 
-  .top-products{
+  .topproduct{
     background: var(--bg-black-100);
     width: 100%;
     height: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+  .products-brand{
+    font-size: 15px;
   }
 
-  .top-product-card{
-    background: var(--text-black-900);
-    width: 20rem;
-    height: fit-content;
+  .products-sale{
+    color: #257004;
   }
 
   
