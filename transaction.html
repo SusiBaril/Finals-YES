@@ -54,81 +54,61 @@
       
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-md-7">
-      
-                      <!-- Calculate the Income -->
-                      <div class="income">
-      
-                        <h3>Income</h3>
-                        <h4 class="increase">+ ₱5,000</h4>
-      
-                        <!-- Selection of Date to view Income -->
-      
+                      <div class="col-md-6">
+                          <!-- Transaction of the Customer -->
+                          <div class="transactions">
+                            <h2>Transaction</h2>
+                              <!-- Table for Transaction -->
+                              <div class="table-trans">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                              <th>Customer Number</th>
+                                              <th>Payment Method</th>
+                                              <th>Price</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr>
+                                            <td><a href="#" data-toggle="modal" data-target="#productModal">#123</a></td>
+                                            <td>Cash</td>
+                                            <td>1999</td>
+                                          </tr>
+                                          <!-- Add table rows dynamically here -->
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
                       </div>
-      
-                      <!-- Transaction of the Customer -->
-                      <div class="transactions">
-                        <div class="trans-head">
-      
-                          <!-- Selection of Date to view Transaction -->
-      
+                      <div class="col-md-6">
+                        <div class="order-recent">
+                            <h2>Recent Purchase</h2>
+                            <!-- Recent Purchases -->
+                            <div class="recent-pur">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Product ID</th>
+                                            <th>Date</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#" data-toggle="modal" data-target="#productModal">#123</a></td>
+                                            <td>5/24/2023</td>
+                                            <td>₱1500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#13</td>
+                                            <td>5/18/2023</td>
+                                            <td>₱2500</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- paginationHTML insert Here -->
                         </div>
-      
-                        <!-- Table for Transaction -->
-      
-                        <div class="table-trans">
-                          <table>
-                            <tbody>
-                              <tr>
-                                <td>Customer Number</td>
-                                <td>Payment Method</td>
-                                <td>Price</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-      
-                      </div>
-      
-                    </div>
-                    <div class="col-md-5">
-                      <div class="order-recent">
-                        <h2>Recent Purchase</h2>
-      
-                        <!-- Recent Purchases -->
-                        <div class="recent-pur">
-                          <table>
-                            <thead>
-                              <tr>
-                                <th>Product</th>
-                                <th>Customer Numer</th>
-                                <th>Date</th>
-                                <th>Price</th>
-                                <th>Status</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>Oil</td>
-                                <td>#563927</td>
-                                <td>5/24/2023</td>
-                                <td>₱1500</td>
-                                <td><span class="text-success">Success</span></td>
-                              </tr>
-                              <tr>
-                                <td>Tail Light</td>
-                                <td>#123453</td>
-                                <td>5/18/2023</td>
-                                <td>₱2500</td>
-                                <td><span class="text-danger">Failed</span></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-      
-                        <!-- paginationHTMl insert Here -->
-      
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -137,6 +117,31 @@
 
         </div>
         
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h5 class="modal-title text-white" id="productModalLabel">Customer Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-white">
+            <!-- Customer and item details will be displayed here -->
+            <p><strong>Customer Name:</strong> John Doe</p>
+            <p><strong>Item Name:</strong> Product X</p>
+            <p><strong>Price:</strong> $50.00</p>
+            <p><strong>Quantity:</strong> 3</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <!-- You can add additional buttons here if needed -->
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
