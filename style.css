@@ -531,6 +531,18 @@ table a{
     color: var(--text-black-900);
 }
 
+/* Eto din */
+
+.orders{
+    margin-top: 10px;
+}
+
+.checkout{
+    margin-top: 10px;
+}
+
+/* Hangang dito */
+
 /* Stocks Sections */
 
 .stocks{
