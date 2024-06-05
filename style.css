@@ -344,47 +344,50 @@ body{
 }
 
 .products {
-    background: var(--bg-black-100);
     border-radius: 20px;
+    color: var(--text-black-900);
   }
 
  .view-products{
     background: var(--text-black-900);
     color: var(--bg-black-900);
-    width: 35rem;
-    height: 12rem;
+    width: 280px;
+    height: 450px;
     padding: 15px;
     border-radius: 15px;
     margin: 1px;
  }
 
- .product-box{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+ .product-image{
+    width: 250px;
  }
 
-.product-details {
-    color: var(--bg-black-100);
-    width: fit-content;
-    text-align: left;
-  }
+ .product-brand{
+    margin: 0;
+ }
 
-  .product-image{
-    width: 140px;
-    border: 1px solid var(--bg-black-100);
+ .product-title{
+    font-size: 20px;
+    margin: 0;
+ }
+
+ .product-price{
+    font-size: 50px;
+    margin: 0;
+ }
+
+ .product-boxs button{
+    background: var(--bg-black-100);
+    color: #f00;
+    padding: 5px;
     border-radius: 10px;
-    margin: 10px;
-  }
+ }
 
-.product-title {
-    font-size: 24px; /* Increased font size */
-}
-
-.product-price {
-    font-size: 16px; /* Adjust the font size */
-    margin-bottom: 10px; /* Add spacing between price and button */
-}
+ .checkoutbtn{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+ }
 
 .add-cart-button{
     margin-top: 35px;
@@ -478,6 +481,26 @@ body{
     font-size: 20px;
 }
 
+/* Eto din */
+
+.orders{
+    background: var(--bg-black-100);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.checkout{
+    background: var(--bg-black-100);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+/* Hangang dito */
+
 /* Style the minus button */
 .quantity-container button.minus-button {
     background: red;
@@ -530,18 +553,6 @@ table thead{
 table a{
     color: var(--text-black-900);
 }
-
-/* Eto din */
-
-.orders{
-    margin-top: 10px;
-}
-
-.checkout{
-    margin-top: 10px;
-}
-
-/* Hangang dito */
 
 /* Stocks Sections */
 
